@@ -13,7 +13,7 @@ import { Middleware } from './middleware';
 import { HandlerGenerator } from './handlergenerator';
 import { TestClass } from './testclass';
 const config = require('./config');
-var m = new Middleware();
+var m = new Middleware();//
 
   var handlers = new HandlerGenerator();
 const swaggerOptions={

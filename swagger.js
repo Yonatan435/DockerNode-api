@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.swaggerDocument = void 0;
 var swagger_login_1 = require("./swagger.login");
 var swagger_login_2 = require("./swagger.login");
+var swagger_login_3 = require("./swagger.login");
 exports.swaggerDocument = {
     openapi: '3.0.1',
     info: {
@@ -45,6 +46,9 @@ exports.swaggerDocument = {
         },
         "/api/verify": {
             "get": swagger_login_2.getVerify
+        },
+        "/api/getQuery": {
+            "post": swagger_login_3.getQuery
         }
     }
 };

@@ -51,4 +51,18 @@ export const getVerify = {
     responses: {
         "200": { }
     }
+}
+    export const getQuery = {
+        tags: ['Query'],
+        description: "QueryMethod",
+        operationId: 'query',
+        security: [
+            {
+                bearerAuth: []
+            }
+        ],
+        
+        responses: {
+            "200": { }
+        }
 } 

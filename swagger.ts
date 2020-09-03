@@ -1,5 +1,6 @@
 import { getLogin } from './swagger.login';
 import { getVerify } from './swagger.login';
+import { getQuery } from './swagger.login';
 export const swaggerDocument = {
     openapi: '3.0.1',
     info: {
@@ -43,6 +44,9 @@ export const swaggerDocument = {
         },
         "/api/verify": {
             "get": getVerify
+        },
+        "/api/getQuery": {
+            "post": getQuery
         }
     }
 }

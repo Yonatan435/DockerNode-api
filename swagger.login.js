@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getVerify = exports.getLogin = void 0;
+exports.getQuery = exports.getVerify = exports.getLogin = void 0;
 exports.getLogin = {
     tags: ['Login'],
     description: "LoginMethod",
@@ -42,6 +42,19 @@ exports.getVerify = {
     tags: ['Verify'],
     description: "VerifyMethod",
     operationId: 'verify',
+    security: [
+        {
+            bearerAuth: []
+        }
+    ],
+    responses: {
+        "200": {}
+    }
+};
+exports.getQuery = {
+    tags: ['Query'],
+    description: "QueryMethod",
+    operationId: 'query',
     security: [
         {
             bearerAuth: []

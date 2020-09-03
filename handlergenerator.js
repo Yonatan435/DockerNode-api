@@ -4,7 +4,8 @@ exports.HandlerGenerator = void 0;
 var jwt = require("jsonwebtoken");
 var config = require('./config.js');
 var HandlerGenerator = /** @class */ (function () {
-    function HandlerGenerator() {
+    function HandlerGenerator(mongo) {
+        this._mongo = mongo;
     }
     HandlerGenerator.prototype.login = function (req, res) {
         var username = req.body.username;

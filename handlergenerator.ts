@@ -1,9 +1,13 @@
 import jwt = require('jsonwebtoken');
+import MongoDal = require('./mongo');
 const config = require('./config.js');
  
 export class HandlerGenerator {
-    constructor()
-    {}
+  _mongo: MongoDal.MongoDal;
+    constructor(mongo: MongoDal.MongoDal)
+    {
+      this._mongo = mongo;
+    }
     login (req, res) {
       let username = req.body.username;
       let password = req.body.password;
@@ -19,6 +23,8 @@ export class HandlerGenerator {
             }
           );
           // return the JWT token for the future API calls
+          
+        
           res.json({
             success: true,
             message: 'Authentication successful!',

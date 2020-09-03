@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  helloworld2:
+    image: helloworld2
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 8443:8443
